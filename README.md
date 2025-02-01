@@ -11,7 +11,7 @@ Este repositorio tiene como propósito almacenar los avances y trabajos realizad
 
 Durante este semestre se cursaron cuatro asignaturas, de las cuales tres forman parte del plan de estudios oficial y una se cursó como oyente en CIMAT - Guanajuato.
 
-Optimización: Fundamentos y aplicaciones de métodos numéricos y algoritmos para la optimización.
-Ciencia de Datos: Técnicas y herramientas para el análisis, procesamiento y visualización de datos.
-Estadística Multivariada: Modelos y métodos para el análisis de datos con múltiples variables.
-Procesamiento de Lenguaje Natural: Exploración y aplicación de técnicas para el análisis y comprensión de textos (cursada como oyente).
+* Optimización: Fundamentos y aplicaciones de métodos numéricos y algoritmos para la optimización.
+* Ciencia de Datos: Técnicas y herramientas para el análisis, procesamiento y visualización de datos.
+* Estadística Multivariada: Modelos y métodos para el análisis de datos con múltiples variables.
+* Procesamiento de Lenguaje Natural: Exploración y aplicación de técnicas para el análisis y comprensión de textos (cursada como oyente).
