@@ -1,5 +1,5 @@
 *.pdf
 
 # T1 de PLN - Quitar archivos generados.
-PLN-Guanajuato/Tareas/Tarea1-NLP-CIMAT/clean_estenograficas/*.txt
-PLN-Guanajuato/Tareas/Tarea1-NLP-CIMAT/corpus.txt
+PLN-Guanajuato/Tareas/Tarea1/clean_estenograficas/*.txt
+PLN-Guanajuato/Tareas/Tarea1/corpus.txt
