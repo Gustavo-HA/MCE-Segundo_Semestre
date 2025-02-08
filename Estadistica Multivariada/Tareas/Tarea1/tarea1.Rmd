@@ -1,0 +1,89 @@
+---
+title: "Tarea 1 de Estadística Multivariada"
+author: "Gustavo Hernández Angeles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+## Ejercicio 2
+Dados los siguientes datos:
+
+```{r, echo=FALSE}
+library(knitr)
+
+datos <- data.frame(
+  hipoteca_anios = c(8.7, 14.3, 18.9, 19.0, 20.5, 14.7, 18.8, 37.3, 12.6, 25.7), # nolint
+  precio_avg = c(0.3, 0.9, 1.8, 0.8, 0.9, 1.1, 2.5, 2.7, 1.3, 3.4),
+  superficie_cocina = c(3.1, 7.4, 9.0, 9.4, 8.3, 7.6, 12.6, 18.1, 5.9, 15.9) # nolint
+)
+
+kable(datos, format = "html")
+```
+
+#### Inciso a)
+Dibuje el diagrama de dispersión múltiple y cómentese el aspecto del gráfico.
+
+```{r}
+pairs(datos)
+```
+
+Parece ser que todas las variables tienen cierto grado de dependencia lineal entre las demás. De manera visual, podemos ver que las variables con una dependencia lineal más fuerte son `hipoteca_anios` y `superficie_cocina`. 
+
+
+#### Inciso b)
+Para $X_1$ y $X_2$ calcúlense, respectivamente, las medias muestrales $\bar{x}_1$ y $\bar{x}_2$, las varianzas muestrales $s_{11}$ y $s_{22}$, la covarianza entre $X_1$ y $X_2$, $s_{12}$, y la correlación entre ambas, $r_{12}$. Intérpretese el valor obtenido de $r_{12}$.
+
+```{r}
+media_x1 <- mean(datos$hipoteca_anios)
+media_x2 <- mean(datos$precio_avg)
+
+var_x1 <- var(datos$hipoteca_anios)
+var_x2 <- var(datos$precio_avg)
+
+cov_x1_x2 <- cov(datos$hipoteca_anios, datos$precio_avg)
+
+# La correlacion es la covarianza dividida por la raiz s11 y s22
+cor_x1_x2 <- cov_x1_x2 / sqrt(var_x1 * var_x2)
+
+sprintf("Correlación entre X_1 y X_2: %.3f", cor_x1_x2)
+```
+
+Esta correlación nos indica una relación lineal leve entre las variables $X_1$ y $X_2$.  
+Es algo que podemos ver también en la gráfica de dispesión múltiple.
+
+#### Inciso c)
+
+Utilizando la matriz de datos $X$ y la de centrado $P$, calcúlense el vector de medias muestrales $\bar{x}$ y la matriz de covarianzas muestrales $S$. A partir de ésta obtengáse la matriz de correlaciones $R$.
+
+Para esto, tomamos en cuenta que
+$$PX = X - 1\bar{x}'$$
+$$\Rightarrow \bar{x} = (\frac{1}{n})(X - PX)'1$$
+
+```{r}
+# Matriz de datos
+X <- as.matrix(datos)
+vec_1 <- rep(1, nrow(X)) # Vector de unos
+
+# Matriz de centrado
+P <- diag(vec_1) - (1 / nrow(X)) * vec_1 %*% t(vec_1)
+
+# Vector de medias muestrales
+media_x <- t(X - P %*% X) %*% vec_1 * (1 / nrow(X))
+
+print(media_x)
+
+# Matriz de covarianzas muestrales
+S <- (1 / nrow(X)) * t(X) %*% P %*% X
+print(S)
+```
+
+Tenemos que la matriz de correlacion está dada por:
+$$R = D^{-1/2}SD^{-1/2}$$
+
+```{r}
+D <- diag(1 / sqrt(diag(S)))
+
+R <- D %*% S %*% D
+print(R)
+```
