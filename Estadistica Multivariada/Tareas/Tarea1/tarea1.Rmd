@@ -62,28 +62,28 @@ $$\Rightarrow \bar{x} = (\frac{1}{n})(X - PX)'1$$
 
 ```{r}
 # Matriz de datos
-X <- as.matrix(datos)
-vec_1 <- rep(1, nrow(X)) # Vector de unos
+x <- as.matrix(datos)
+vec_1 <- rep(1, nrow(x)) # Vector de unos
 
 # Matriz de centrado
-P <- diag(vec_1) - (1 / nrow(X)) * vec_1 %*% t(vec_1)
+p <- diag(vec_1) - (1 / nrow(x)) * vec_1 %*% t(vec_1)
 
 # Vector de medias muestrales
-media_x <- t(X - P %*% X) %*% vec_1 * (1 / nrow(X))
+media_x <- t(x - p %*% x) %*% vec_1 * (1 / nrow(x))
 
 print(media_x)
 
 # Matriz de covarianzas muestrales
-S <- (1 / nrow(X)) * t(X) %*% P %*% X
-print(S)
+s <- (1 / nrow(x)) * t(x) %*% p %*% x
+print(s)
 ```
 
 Tenemos que la matriz de correlacion está dada por:
 $$R = D^{-1/2}SD^{-1/2}$$
 
 ```{r}
-D <- diag(1 / sqrt(diag(S)))
+d <- diag(1 / sqrt(diag(s)))
 
-R <- D %*% S %*% D
-print(R)
+r <- d %*% s %*% d
+print(r)
 ```
