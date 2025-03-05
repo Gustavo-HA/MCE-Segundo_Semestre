@@ -3,3 +3,7 @@
 # T1 de PLN - Quitar archivos generados.
 PLN-Guanajuato/Tareas/Tarea1/clean_estenograficas/*.txt
 PLN-Guanajuato/Tareas/Tarea1/corpus.txt
+
+
+# T3 de DS - No guardar el dataset Flickr30k
+*.jpg
