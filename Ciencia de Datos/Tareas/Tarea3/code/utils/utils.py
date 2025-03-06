@@ -42,7 +42,7 @@ def obtener_histograma_gris(imagen):
                         0, 256])  # Calcular histograma
     # Normalizar y convertir a vector 1D
     hist = cv2.normalize(hist, hist).flatten()
-    return hist
+    return np.array(hist)
 
 
 def obtener_histograma_color(imagen):
@@ -76,8 +76,8 @@ def get_vector(ruta_imagen, tipo="gris"):  # tipo = {gris, color, combinado}
         if tipo == "combinado":
             vector_final = np.concatenate((hist_gris, hist_color))
         elif tipo == "gris":
-            vector_final = hist_gris
+            vector_final = np.array(hist_gris)
         elif tipo == "color":
-            vector_final = hist_color
+            vector_final = np.array(hist_color)
 
     return vector_final
