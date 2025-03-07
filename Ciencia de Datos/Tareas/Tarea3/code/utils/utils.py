@@ -81,3 +81,30 @@ def get_vector(ruta_imagen, tipo="gris"):  # tipo = {gris, color, combinado}
             vector_final = np.array(hist_color)
 
     return vector_final
+
+
+def plot_histograms(histograma):
+    n_canales = len(histograma)//256
+    nums = list(range(256))*n_canales
+
+    if n_canales == 4:
+        canales = ["Intensidad", "Azul", "Verde", "Rojo"]
+    elif n_canales == 3:
+        canales = ["Azul", "Verde", "Rojo"]
+    else:
+        canales = ["Intensidad"]
+
+    df = pd.DataFrame({
+        "x": nums,
+        "y": histograma,
+        "Canal": np.repeat(np.array(canales), 256)
+    })
+
+    palette = {
+        "Intensidad": "black",
+        "Azul": "blue",
+        "Verde": "green",
+        "Rojo": "red"
+    }
+
+    return sns.lineplot(data=df, x="x", y="y", hue="Canal", palette=palette)
