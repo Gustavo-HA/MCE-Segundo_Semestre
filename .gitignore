@@ -1,4 +1,5 @@
 *.pdf
+*.env
 
 # T1 de PLN - Quitar archivos generados.
 PLN-Guanajuato/Tareas/Tarea1/clean_estenograficas/*.txt
