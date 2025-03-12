@@ -1,0 +1,10 @@
+m: 12
+d: [30 15 15 25 33 40 45 45 26 14 25 30]
+q: 30
+qe: 15
+c: 32
+ce: 40
+a: 2
+ca: 5
+
+Meses: ["Enero" "Febrero" "Marzo" "Abril" "Mayo" "Junio" "Julio" "Agosto" "Septiembre" "Octubre" "Noviembre" "Diciembre"]

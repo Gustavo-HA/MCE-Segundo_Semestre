@@ -1,0 +1,38 @@
+model RendimientoMinimo
+uses "mmxprs"; 
+
+declarations
+	m, n: integer 
+end-declarations
+
+initializations from 'caso 4.txt'
+	m n
+end-initializations
+
+declarations
+	!Conjuntos
+	R=1..m  !Resultados
+	O=1..n  !Opciones
+	!Parámetros
+	g: array(R,O) of real !Ganancia(o pérdida) por dolar invertido en la opción j si sale el resultado i
+	d: integer !Dolares dsponibles
+	!Variables de decisión
+	x: array(O) of mpvar !Dolares invertidos en la opción j
+	y: mpvar !Rendimiento mínimo
+end-declarations
+
+initializations from 'caso 4.txt'
+ g d
+end-initializations
+
+z:=y !rendimiento mínimo
+forall(i in R) sum(j in O) x(j)*g(i,j)>=y !garantiza que y es el rendimiento mínimo 
+sum(j in O) x(j)<=d !no se puede invertir más del disponible
+y is_free    !rendimiento irrestricto, es decir, libre
+maximize (z)
+
+writeln("El beneficio maximo es: ",getobjval)
+forall(j in O | getsol(x(j))>0) 
+writeln("Invertir ", getsol (x(j)), " en la opcion  ", j)
+
+end-model

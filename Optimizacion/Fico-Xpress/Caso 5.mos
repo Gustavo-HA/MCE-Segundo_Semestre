@@ -1,0 +1,47 @@
+model ModelName
+uses "mmxprs"
+
+declarations
+	P: set of integer
+	L: set of integer
+end-declarations
+
+initializations from 'caso 5.txt'
+	P L
+end-initializations
+
+declarations
+	c: array(P) of integer
+	t: array(P) of integer
+	d: array(P) of real
+	m: array(P) of real
+	u: array(L,P) of integer
+	p: real
+	D: real
+	n: array(L) of integer
+	H: real
+	st: real
+	sc: real
+	x: array(P) of mpvar
+	y: mpvar
+end-declarations
+
+initializations from 'caso 5.txt'
+	c t d m u p D n H st sc
+end-initializations
+
+z:=p*y-D*(sum(j in P)d(j)*x(j))-st*(sum(j in P) t(j)*x(j)-2*y ) - sc*(sum(j in P) c(j)*x(j)-y)
+y<=sum(j in P) t(j)*x(j)/2
+y<=sum(j in P) c(j)*x(j)
+sum(j in P) m(j)*x(j) <= 60*H
+forall(i in L) sum(j in P) u(i,j)*x(j) <= n(i)
+forall(j in P) x(j) is_integer
+y is_integer
+
+maximize(z)
+
+writeln("El beneficio maximo es: ", getobjval)
+writeln("Se producen ", getsol(y), " latas")
+forall(j in P | getsol(x(j))>0) writeln("Cortar ", getsol(x(j)), " laminas con el patron ", j)
+
+end-model
