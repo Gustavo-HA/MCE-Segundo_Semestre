@@ -41,6 +41,7 @@ anova(mlm1, mlm2)
 lh.out <- linearHypothesis(mlm1, hypothesis.matrix = c("PR = 0", "DIAP = 0", "QRS = 0"))
 lh.out
 
+
 ## Estadistico de Wilks
 E <- lh.out$SSPE
 H <- lh.out$SSPH

@@ -1,0 +1,100 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+### Gustavo Hernández Angeles
+
+### Problema 1
+
+Considera los datos de Forbes dados el archivo \textit{P1-4.DAT} que corresponde a los datos de compañías más grandes de los USA en 1990.
+
+```{r}
+forbes <- read.table("./data/P1-4.DAT")
+names(forbes) <- c("Sales","Profits","Assets")
+```
+
+-   Ajuste un modelo de regresión lineal a los datos, considerando profits como la variable dependiente, y sales y assets como las variables independientes.
+
+    ```{r}
+    regresion <- lm(Profits ~ Sales + Assets, data=forbes)
+    summary(regresion)
+    ```
+
+-   Determine los intervalos de confianza simúltaneos e individuales para un nivel de significancia de $\alpha = 0.05$.
+
+    ```{r}
+    # Intervalos individuales
+    conf_int_individual <- confint(regresion, level = 0.95)
+    print("Intervalos de confianza individuales:")
+    print(conf_int_individual)
+    ```
+
+    ```{r}
+    # Intervalos simultaneos
+    alpha <- 0.05
+    # Número de coeficientes (incluye el intercepto)
+    num_coef <- length(coef(regresion))
+    # Valor t para Bonferroni con ajuste: alpha/(2*num_coef)
+    t_val <- qt(1 - alpha/(2*num_coef), df = regresion$df.residual)
+    coeficientes <- coef(regresion)
+    errores_std <- summary(regresion)$coefficients[, "Std. Error"]
+    conf_int_simultaneo <- cbind(coeficientes - t_val * errores_std, 
+                                 coeficientes + t_val * errores_std)
+    colnames(conf_int_simultaneo) <- c("Límite inferior", "Límite superior")
+    print("Intervalos de confianza simultáneos (Bonferroni):")
+    print(conf_int_simultaneo)
+    ```
+
+-   Aplique la prueba de la razón de verosimilitud para $H_0: \beta_2 = 0$ con un nivel de significancia $\alpha=0.05$. ¿El modelo debería ser modificado?
+
+    ```{r}
+    # Ajustar el modelo reducido (sin la variable assets)
+    modelo_reducido <- lm(Profits ~ Sales, data = forbes)
+    # Comparar ambos modelos
+    prueba_lr <- anova(modelo_reducido, regresion)
+    print("Prueba de razón de verosimilitud (modelo reducido vs completo):")
+    print(prueba_lr)
+    # Si el valor-p es menor a 0.05, se rechaza H0, indicando que la variable assets aporta información.
+
+    # Por lo tanto, el modelo sí debería ser modificado.
+    ```
+
+-   Analiza los residuales y discuta si el modelo es adecuado. Calcule los leverage points asociados. ¿Algunas de estas compañías pueden considerarse datos atípicos en el conjunto de variables explicativas?
+
+    ```{r}
+    # 6. Análisis de residuos
+    residuos <- resid(regresion)
+    plot(residuos, xlab = "Índice de Observación", ylab = "Residuo")
+    text(x = 1:length(residuos), y = residuos, labels = 1:length(residuos), pos = 4, cex = 0.8, col = "black")
+    abline(h = 0, col = "red", lty = 2)
+    ```
+
+    ```{r}
+    # 7. Cálculo y gráfica de leverage points
+    leverage <- hatvalues(regresion)
+    plot(leverage,
+         xlab = "Índice de Observación", ylab = "Leverage")
+    text(x = 1:length(residuos), y = leverage, labels = 1:length(residuos), pos = 4, cex = 0.8, col = "black")
+    # Se traza una línea de referencia, por ejemplo, 2*(promedio de leverage)
+    abline(h = 2*mean(leverage), col = "red", lty = 2)
+    ```
+* INciso de nuevo dato
+```{r}
+nuevo_dato <- data.frame(Sales = 100, Assets = 500)
+prediccion <- predict(regresion, newdata = nuevo_dato, 
+                      interval = "prediction", level = 0.95)
+print("Intervalo de predicción para sales = 100 y assets = 500:")
+print(prediccion)
+```
+  
+
+### Problema 2
+
+Considere los datos de contaminantes dados en el archivo T1-5.DAT que corresponde a los datos de contaminantes a mediodía en LA.
+
+```{r}
+df_2 <- read.table("./data/T1-5.dat")
+```
+
+Sean $Y_1 = NO_2$ y $Y_2 = O_3$ las dos respuestas (contaminantes) correspondientes a las variables predictoras $Z_1=$wind y \$Z_2 = \$ solar radiation.
