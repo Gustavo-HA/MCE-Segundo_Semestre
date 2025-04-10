@@ -9,3 +9,6 @@ PLN-Guanajuato/Tareas/Tarea1/corpus.txt
 # T3 de DS - No guardar el dataset Flickr30k
 *.jpg
 *results.csv
+
+*.RData
+*.Rhistory
