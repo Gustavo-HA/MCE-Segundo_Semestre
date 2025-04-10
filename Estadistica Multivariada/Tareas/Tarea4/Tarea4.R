@@ -204,4 +204,71 @@ fa3 <- factanal(X, factors = 3)
 fa2$loadings
 fa3$loadings
 
+# para m=2
+
+comunalidades_m2 <- rowSums(fa2$loadings^2)
+comunalidades_m2
+especificas_m2 <- 1 - comunalidades_m2
+diag(especificas_m2)
+reconstruccion_m2 <- fa2$loadings %*% t(fa2$loadings) + diag(especificas_m2)
+reconstruccion_m2
+
+norm(cor(X) - reconstruccion_m2, type = "F")
+
+
+# para m=3
+
+comunalidades_m3 <- rowSums(fa3$loadings^2)
+comunalidades_m3
+especificas_m3 <- 1 - comunalidades_m3
+especificas_m3
+reconstruccion_m3 <- fa3$loadings %*% t(fa3$loadings) + diag(especificas_m3)
+reconstruccion_m3
+
+norm(cor(X) - reconstruccion_m3, type = "F")
+
+
+scores_pond <- factanal(X, factors = 3, scores = "Bartlett")$scores
+scores_reg <- factanal(X, factors = 3, scores = "regression")$scores
+dimnames(scores_reg)[[1]]<-vendedores[,1]
+dimnames(scores_pond)[[1]]<-vendedores[,1]
+
+# scatter en 3d
+library(scatterplot3d)
+scatterplot3d(scores_reg, angle=35, col.grid="lightblue", main="Grafica de los factor scores", pch=20)
+scatterplot3d(scores_pond, angle=35, col.grid="lightblue", main="Grafica de los factor scores", pch=20)
+#vamos a graficar los factor scores tomados dos a dos
+
+
+#f1 x f2
+par(pty="s", mar = c(4,4,1,1))
+plot(scores_reg[,1],scores_reg[,2],
+     ylim=range(scores_reg[,1]),
+     xlab="Factor 1",ylab="Factor 2",type="n",lwd=2)
+text(scores_reg[,1],scores_reg[,2],
+     labels=abbreviate(row.names(scores_reg),minlength=8),cex=0.6,lwd=2)
+text(scores_pond[,1],scores_pond[,2],
+     labels=abbreviate(row.names(scores_pond),minlength=8),cex=0.6,lwd=2)
+
+
+#f1 x f3
+par(pty="s", mar = c(4,4,1,1))
+plot(scores_reg[,1],scores_reg[,3],
+     ylim=range(scores_reg[,1]),
+     xlab="Factor 1",ylab="Factor 3",type="n",lwd=2)
+text(scores_reg[,1],scores_reg[,3],
+     labels=abbreviate(row.names(scores_reg),minlength=8),cex=0.6,lwd=2)
+text(scores_pond[,1],scores_pond[,3],
+     labels=abbreviate(row.names(scores_pond),minlength=8),cex=0.6,lwd=2)
+
+
+#f2 x f3
+par(pty="s", mar = c(4,4,1,1))
+plot(scores_reg[,2],scores_reg[,3],
+     ylim=range(scores_reg[,2]),
+     xlab="Factor 2",ylab="Factor 3",type="n",lwd=2)
+text(scores_reg[,2],scores_reg[,3],
+     labels=abbreviate(row.names(scores_reg),minlength=8),cex=0.6,lwd=2)
+text(scores_pond[,2],scores_pond[,3],
+     labels=abbreviate(row.names(scores_pond),minlength=8),cex=0.6,lwd=2)
 
