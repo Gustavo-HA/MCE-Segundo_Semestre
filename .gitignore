@@ -12,3 +12,6 @@ PLN-Guanajuato/Tareas/Tarea1/corpus.txt
 
 *.RData
 *.Rhistory
+
+*.zip
+__pycache__/
