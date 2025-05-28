@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/76933cbfb3d245c782340cb1dc6766ff/artifacts
+end_time: 1748405434096
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 76933cbfb3d245c782340cb1dc6766ff
+run_name: sincere-kite-835
+run_uuid: 76933cbfb3d245c782340cb1dc6766ff
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405432049
+status: 3
+tags: []
+user_id: gus

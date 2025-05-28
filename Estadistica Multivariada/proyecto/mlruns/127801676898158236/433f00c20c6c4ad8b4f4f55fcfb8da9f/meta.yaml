@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/433f00c20c6c4ad8b4f4f55fcfb8da9f/artifacts
+end_time: 1748405473349
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 433f00c20c6c4ad8b4f4f55fcfb8da9f
+run_name: receptive-pug-836
+run_uuid: 433f00c20c6c4ad8b4f4f55fcfb8da9f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405471338
+status: 3
+tags: []
+user_id: gus

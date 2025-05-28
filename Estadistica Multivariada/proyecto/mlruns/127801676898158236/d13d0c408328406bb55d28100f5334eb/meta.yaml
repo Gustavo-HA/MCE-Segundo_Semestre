@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/d13d0c408328406bb55d28100f5334eb/artifacts
+end_time: 1748405452866
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: d13d0c408328406bb55d28100f5334eb
+run_name: caring-croc-70
+run_uuid: d13d0c408328406bb55d28100f5334eb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405450847
+status: 3
+tags: []
+user_id: gus

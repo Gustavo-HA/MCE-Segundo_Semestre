@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/082835cc69594ca3b2188015dd626b2e/artifacts
+end_time: 1748405409311
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 082835cc69594ca3b2188015dd626b2e
+run_name: sassy-fox-8
+run_uuid: 082835cc69594ca3b2188015dd626b2e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405407242
+status: 3
+tags: []
+user_id: gus

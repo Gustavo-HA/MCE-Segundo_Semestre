@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/6f6318cbcc214f6ea5c9a242a8d94312/artifacts
+end_time: 1748405477437
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 6f6318cbcc214f6ea5c9a242a8d94312
+run_name: suave-sloth-422
+run_uuid: 6f6318cbcc214f6ea5c9a242a8d94312
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405475393
+status: 3
+tags: []
+user_id: gus

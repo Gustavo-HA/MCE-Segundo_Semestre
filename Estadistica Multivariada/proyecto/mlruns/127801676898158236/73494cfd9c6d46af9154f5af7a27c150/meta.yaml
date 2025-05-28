@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/73494cfd9c6d46af9154f5af7a27c150/artifacts
+end_time: 1748405543089
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 73494cfd9c6d46af9154f5af7a27c150
+run_name: brawny-frog-715
+run_uuid: 73494cfd9c6d46af9154f5af7a27c150
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405541060
+status: 3
+tags: []
+user_id: gus

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/7495c6a4c7124e9da8753111d5e3c375/artifacts
+end_time: 1748405460967
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 7495c6a4c7124e9da8753111d5e3c375
+run_name: crawling-owl-853
+run_uuid: 7495c6a4c7124e9da8753111d5e3c375
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405458969
+status: 3
+tags: []
+user_id: gus

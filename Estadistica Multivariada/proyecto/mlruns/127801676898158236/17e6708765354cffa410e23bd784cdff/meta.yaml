@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/17e6708765354cffa410e23bd784cdff/artifacts
+end_time: 1748405388680
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 17e6708765354cffa410e23bd784cdff
+run_name: blushing-mole-783
+run_uuid: 17e6708765354cffa410e23bd784cdff
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405386620
+status: 3
+tags: []
+user_id: gus

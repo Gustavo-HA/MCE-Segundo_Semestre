@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/a6091fe21acd4519a12ebf15a52bf067/artifacts
+end_time: 1748405438238
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: a6091fe21acd4519a12ebf15a52bf067
+run_name: debonair-sloth-685
+run_uuid: a6091fe21acd4519a12ebf15a52bf067
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405436236
+status: 3
+tags: []
+user_id: gus

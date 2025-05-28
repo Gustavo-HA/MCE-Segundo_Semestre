@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/3058f4ca05d244e588f132b6e05b943b/artifacts
+end_time: 1748405551226
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 3058f4ca05d244e588f132b6e05b943b
+run_name: intelligent-deer-438
+run_uuid: 3058f4ca05d244e588f132b6e05b943b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405549228
+status: 3
+tags: []
+user_id: gus

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/305d714430e146e3a6131a7d90c8825d/artifacts
+end_time: 1748405380478
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 305d714430e146e3a6131a7d90c8825d
+run_name: youthful-snail-171
+run_uuid: 305d714430e146e3a6131a7d90c8825d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405378423
+status: 3
+tags: []
+user_id: gus

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/0bb6deabff6745a192f751f5b15eb399/artifacts
+end_time: 1748405489689
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 0bb6deabff6745a192f751f5b15eb399
+run_name: flawless-jay-139
+run_uuid: 0bb6deabff6745a192f751f5b15eb399
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405487666
+status: 3
+tags: []
+user_id: gus

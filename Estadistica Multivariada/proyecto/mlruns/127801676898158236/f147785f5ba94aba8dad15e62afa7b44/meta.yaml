@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/f147785f5ba94aba8dad15e62afa7b44/artifacts
+end_time: 1748405444582
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: f147785f5ba94aba8dad15e62afa7b44
+run_name: unruly-seal-371
+run_uuid: f147785f5ba94aba8dad15e62afa7b44
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405442472
+status: 3
+tags: []
+user_id: gus

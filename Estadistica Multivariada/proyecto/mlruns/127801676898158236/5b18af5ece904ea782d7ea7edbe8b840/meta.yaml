@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/5b18af5ece904ea782d7ea7edbe8b840/artifacts
+end_time: 1748405563619
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 5b18af5ece904ea782d7ea7edbe8b840
+run_name: kindly-penguin-390
+run_uuid: 5b18af5ece904ea782d7ea7edbe8b840
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405561510
+status: 3
+tags: []
+user_id: gus

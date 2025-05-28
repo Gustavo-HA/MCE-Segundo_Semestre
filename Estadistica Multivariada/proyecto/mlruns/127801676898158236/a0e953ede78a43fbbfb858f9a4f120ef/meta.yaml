@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/a0e953ede78a43fbbfb858f9a4f120ef/artifacts
+end_time: 1748405485622
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: a0e953ede78a43fbbfb858f9a4f120ef
+run_name: spiffy-swan-33
+run_uuid: a0e953ede78a43fbbfb858f9a4f120ef
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405483569
+status: 3
+tags: []
+user_id: gus

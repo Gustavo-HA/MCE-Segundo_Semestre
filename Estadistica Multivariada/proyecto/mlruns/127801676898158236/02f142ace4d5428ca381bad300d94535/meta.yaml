@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/02f142ace4d5428ca381bad300d94535/artifacts
+end_time: 1748405411385
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 02f142ace4d5428ca381bad300d94535
+run_name: merciful-mouse-692
+run_uuid: 02f142ace4d5428ca381bad300d94535
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405409323
+status: 3
+tags: []
+user_id: gus

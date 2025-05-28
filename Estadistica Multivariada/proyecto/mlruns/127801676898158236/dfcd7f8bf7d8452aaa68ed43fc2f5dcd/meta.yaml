@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/dfcd7f8bf7d8452aaa68ed43fc2f5dcd/artifacts
+end_time: 1748405553264
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: dfcd7f8bf7d8452aaa68ed43fc2f5dcd
+run_name: welcoming-perch-124
+run_uuid: dfcd7f8bf7d8452aaa68ed43fc2f5dcd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405551237
+status: 3
+tags: []
+user_id: gus

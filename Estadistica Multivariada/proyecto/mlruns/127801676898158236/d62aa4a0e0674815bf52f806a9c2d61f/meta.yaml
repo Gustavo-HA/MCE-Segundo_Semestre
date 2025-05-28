@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/d62aa4a0e0674815bf52f806a9c2d61f/artifacts
+end_time: 1748405481517
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: d62aa4a0e0674815bf52f806a9c2d61f
+run_name: merciful-wasp-47
+run_uuid: d62aa4a0e0674815bf52f806a9c2d61f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405479473
+status: 3
+tags: []
+user_id: gus

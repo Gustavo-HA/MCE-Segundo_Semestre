@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/4886e6a5a2c041ffb655f60926e0f859/artifacts
+end_time: 1748405520594
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 4886e6a5a2c041ffb655f60926e0f859
+run_name: intrigued-squid-737
+run_uuid: 4886e6a5a2c041ffb655f60926e0f859
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405518576
+status: 3
+tags: []
+user_id: gus

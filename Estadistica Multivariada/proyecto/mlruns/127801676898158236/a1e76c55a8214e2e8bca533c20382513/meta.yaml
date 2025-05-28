@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/a1e76c55a8214e2e8bca533c20382513/artifacts
+end_time: 1748405534964
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: a1e76c55a8214e2e8bca533c20382513
+run_name: marvelous-trout-245
+run_uuid: a1e76c55a8214e2e8bca533c20382513
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405532935
+status: 3
+tags: []
+user_id: gus

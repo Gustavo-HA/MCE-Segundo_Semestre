@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/2e0bd5a794554eaab678530ddbfe04ea/artifacts
+end_time: 1748405495952
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 2e0bd5a794554eaab678530ddbfe04ea
+run_name: fortunate-ram-77
+run_uuid: 2e0bd5a794554eaab678530ddbfe04ea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405493870
+status: 3
+tags: []
+user_id: gus

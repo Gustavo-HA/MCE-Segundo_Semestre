@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/97d440da0a584e729572ddfd770cca99/artifacts
+end_time: 1748405382522
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 97d440da0a584e729572ddfd770cca99
+run_name: silent-duck-454
+run_uuid: 97d440da0a584e729572ddfd770cca99
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405380490
+status: 3
+tags: []
+user_id: gus

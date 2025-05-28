@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/56cfa1966837412995087d63d43d96fe/artifacts
+end_time: 1748405442458
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 56cfa1966837412995087d63d43d96fe
+run_name: angry-trout-686
+run_uuid: 56cfa1966837412995087d63d43d96fe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405440377
+status: 3
+tags: []
+user_id: gus

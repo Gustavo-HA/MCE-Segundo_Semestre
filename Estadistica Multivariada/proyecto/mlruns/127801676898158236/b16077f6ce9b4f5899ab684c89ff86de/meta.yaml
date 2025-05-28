@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/b16077f6ce9b4f5899ab684c89ff86de/artifacts
+end_time: 1748405559448
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: b16077f6ce9b4f5899ab684c89ff86de
+run_name: rebellious-crab-950
+run_uuid: b16077f6ce9b4f5899ab684c89ff86de
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405557443
+status: 3
+tags: []
+user_id: gus

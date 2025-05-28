@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/c2541d9402774d72a0ae6211d4f60ad5/artifacts
+end_time: 1748405436223
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: c2541d9402774d72a0ae6211d4f60ad5
+run_name: rare-ape-808
+run_uuid: c2541d9402774d72a0ae6211d4f60ad5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405434110
+status: 3
+tags: []
+user_id: gus

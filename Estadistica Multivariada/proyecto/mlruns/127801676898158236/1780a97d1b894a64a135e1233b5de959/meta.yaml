@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/127801676898158236/1780a97d1b894a64a135e1233b5de959/artifacts
+end_time: 1748405450834
+entry_point_name: ''
+experiment_id: '127801676898158236'
+lifecycle_stage: active
+run_id: 1780a97d1b894a64a135e1233b5de959
+run_name: rebellious-carp-857
+run_uuid: 1780a97d1b894a64a135e1233b5de959
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748405448773
+status: 3
+tags: []
+user_id: gus
