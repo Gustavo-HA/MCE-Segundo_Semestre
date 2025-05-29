@@ -15,3 +15,6 @@ PLN-Guanajuato/Tareas/Tarea1/corpus.txt
 
 *.zip
 __pycache__/
+
+mlartifacts/
+mlruns/
