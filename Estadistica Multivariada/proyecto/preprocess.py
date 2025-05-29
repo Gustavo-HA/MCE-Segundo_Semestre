@@ -35,7 +35,7 @@ CATEGORICAL_COLS = [
     "contact"
 ]
 
-NUMERIC_COLS = ['age', 'balance', 'day', 'duration', 'campaign', 'pdays', 'previous']
+NUMERIC_COLS = ['age', 'balance', 'day', 'campaign', 'pdays', 'previous']
 
 
 dict_binary = {

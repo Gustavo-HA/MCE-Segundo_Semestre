@@ -30,14 +30,9 @@ X_test, y_test = test_df.drop(columns=['y']), test_df['y']
 
 # For LDA
 space_lda = {
-    'solver': hp.choice('solver_lda', ['svd', 'lsqr', 'eigen']),
-    'shrinkage': hp.choice('shrinkage_lda', [
-        None,
-        'auto',
-        hp.uniform('shrinkage_lda_value', 0.0, 1.0) # This is a nested choice for the value if float shrinkage is selected
-    ]),
-    'tol': hp.loguniform('tol_lda', np.log(1e-5), np.log(1e-2)),
-    'n_components': hp.choice('n_components_lda', [None, 1])
+    'solver': hp.choice('solver_lda', ["svd"]),
+    'n_components': hp.choice('n_components_lda', [None, 1]),
+    "priors": hp.choice('priors_lda', [[0.5, 0.5]]) # Default priors
 }
 
 def objective_lda(params):
@@ -49,17 +44,12 @@ def objective_lda(params):
         mlflow.log_params(params) # Log the actual parameters hyperopt is trying
 
         solver = params['solver']
-        shrinkage_param = params['shrinkage']
-        
-        # LDA specific logic: 'svd' solver does not support shrinkage.
-        current_shrinkage = None if solver == 'svd' else shrinkage_param
         
         try:
             model = LinearDiscriminantAnalysis(
                 solver=solver,
-                shrinkage=current_shrinkage,
-                tol=params['tol'],
-                n_components=params['n_components']
+                n_components=params['n_components'],
+                priors = params['priors']
             )
             model.fit(X_train, y_train)
             y_pred = model.predict(X_test)
@@ -100,8 +90,9 @@ def objective_lda(params):
 # --- 4. QDA Hyperparameter Optimization ---
 space_qda = {
     'reg_param': hp.uniform('reg_param_qda', 0.0, 1.0),
-    'tol': hp.loguniform('tol_qda', np.log(1e-5), np.log(1e-2))
+    'tol': hp.loguniform('tol_qda', np.log(1e-5), np.log(1e-2)),
     # `priors` can also be tuned if needed, default is None (estimated from data)
+    "priors": hp.choice('priors_qda', [None, [0.5, 0.5]])
 }
 
 def objective_qda(params):
@@ -143,7 +134,7 @@ def objective_qda(params):
         return {'loss': loss, 'status': status, 'f1_score': f1, 'mlflow_run_id': mlflow_run_id}
 
 # --- 5. Run Optimization ---
-MAX_EVALS = 50 # Number of iterations for hyperparameter search (increase for more thorough search)
+MAX_EVALS = 10 # Number of iterations for hyperparameter search (increase for more thorough search)
 
 # LDA Optimization
 print(f"\n--- Starting LDA Hyperparameter Optimization ({MAX_EVALS} evals) ---")
