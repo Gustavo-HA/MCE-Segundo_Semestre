@@ -3,6 +3,8 @@ library("ggplot2")
 
 data <- read.csv("./data/bank-full.csv", sep = ";")
 
+
+
 perform_correspondence_analysis <- function(input_data, col1_name, col2_name,
                                             legend_1, legend_2) {
   # Select the specified columns
